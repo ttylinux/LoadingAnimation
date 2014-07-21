@@ -2,14 +2,40 @@ package com.hereshem.loadinganimation;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+	
+	private Button startBtn;
+	private Button stopBtn;
+	private LoaderAnimation imageView;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		inital();
+		
+	}
+	
+	private void inital()
+	{
+		startBtn = (Button)findViewById(R.id.startBtn);
+	
+		startBtn.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(MainActivity.this,ShowLoadingActivity.class);
+				startActivity(intent);
+				
+			}
+		});
+
 	}
 
 	@Override

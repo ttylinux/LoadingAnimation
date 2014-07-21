@@ -8,10 +8,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <com.hereshem.loadinganimation.LoaderAnimation
+ 
+    <Button
+        android:id="@+id/startBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:layout_below="@+id/fileList"
+        android:text="Show" />
+
+  <com.hereshem.loadinganimation.LoaderAnimation
+        android:id="@+id/loadingAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startBtn"
+         />
 
 </RelativeLayout>
